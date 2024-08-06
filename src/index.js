@@ -1,5 +1,5 @@
 // this statement means that whenever our applicatio has been started the env variables initialised at first in all the files where the env 
-// variables are used 
+// variables has been used 
 // but this statement will break the consistency of our code so we will write the same in some another method 
 //require('dotenv').config({path: './env'})
 
@@ -9,7 +9,7 @@ import dotenv from "dotenv"
 import connectDB from "./db/index.js";
 
 dotenv.config({
-    path: './env'
+    path: './.env'
 })
 
 connectDB()
@@ -30,6 +30,7 @@ connectDB()
 // connectDB
 
 // we will use IIFE (immediedtly invoked function execution ) with async wait because database cnection will take time 
+// as it can happen that our database is in a remote area
 
 // the semicolon is for the cleaning purpose 
 // if someone forgot to give the semicolon in the previous line then it will not through an error
