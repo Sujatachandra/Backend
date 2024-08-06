@@ -22,8 +22,6 @@ class ApiError extends error{
             Error.captureStackTrace(this, this.constructor)
         }
     }
-
-    
-
-    
 }
+
+export{ApiError}
